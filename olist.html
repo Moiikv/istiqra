@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title-ar="Olist · استقراء" data-title-en="Olist · Istiqra">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Olist · استقراء</title>
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/olist.css">
+</head>
+<body>
+<div id="siteHeader"></div>
+
+<main>
+<!-- ================= Project intro ================= -->
+<div class="w ph">
+  <a class="back" href="index.html#work"><span ar="→ كل الأعمال" en="← All work"></span></a>
+  <div class="ph-grid">
+    <div>
+      <div class="live"><i></i><span ar="مشروع تحليل بيانات · داشبورد تفاعلي" en="Data analysis project · interactive dashboard"></span></div>
+      <h1 class="h1s" data-split data-now ar="ما الذي يحرّك التجارة الإلكترونية؟" en="What drives e-commerce?"></h1>
+      <p class="lead rv" data-d="300" ar="تحليل بيانات متجر Olist البرازيلي: 96 ألف طلب مُسلَّم بين يناير 2017 وأغسطس 2018. من أين جاء النمو، وأين يتسرّب العميل، وماذا يكلّفنا التأخير؟" en="An analysis of Brazil's Olist marketplace: 96K delivered orders from Jan 2017 to Aug 2018. Where did growth come from, where do customers leak, and what does delay cost?"></p>
+      <div class="chips rv" data-d="450"><span>Python · pandas</span><span>Data modeling</span><span>SVG dashboard</span><span>Power BI</span></div>
+      <div class="cta rv" data-d="550"><a class="btn lg" href="#dashboard" ar="افتح الداشبورد ↓" en="Open the dashboard ↓"></a><a class="btn lg o" href="#story" ar="اقرأ القصة" en="Read the story"></a></div>
+    </div>
+    <div class="ph-k rv" data-d="300" id="heroKpis"></div>
+  </div>
+</div>
+
+<!-- ================= The data ================= -->
+<section id="data" class="tight"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="البيانات" en="THE DATA"></div><h2 ar="تسعة جداول، قصة واحدة." en="Nine tables, one story."></h2></div><p ar="بدأنا بالأسئلة، ثم ربطنا الجداول بالطلب كمحور مشترك." en="We began with the questions, then joined the tables around the order."></p></div>
+  <div class="schema rv" id="schema"></div>
+  <div class="qs rv" id="questions"></div>
+</div></section>
+
+
+<!-- ================= Nature of the data ================= -->
+<section id="nature"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="طبيعة البيانات" en="NATURE OF THE DATA"></div><h2 ar="ماذا تحتوي هذه البيانات فعلًا؟" en="What is actually inside this data?"></h2></div><p ar="قبل أي رقم، نعرف من أين جاءت البيانات وما حدودها." en="Before any number, we know where the data came from and what it cannot tell us."></p></div>
+  <div class="nat">
+    <ul class="facts rv" id="facts"></ul>
+    <div class="fun rv" id="funnel"></div>
+  </div>
+  <div class="dq rv"><h3 ar="فحوصات جودة البيانات" en="Data quality checks"></h3><div class="tw2"><table id="dqTable"></table></div></div>
+</div></section>
+
+<!-- ================= Workflow ================= -->
+<section id="workflow" class="tight"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="ماذا فعلنا بالبيانات" en="WHAT WE DID"></div><h2 ar="من ملفات خام إلى لوحة تفاعلية." en="From raw files to an interactive board."></h2></div><p ar="ست خطوات، وكل خطوة تترك أثرًا قابلًا للتحقق." en="Six steps, each leaving something you can verify."></p></div>
+  <ol class="flow" id="flow"></ol>
+  <div class="code rv"><div class="cb"><span ar="الكود الأساسي الذي يبني كل الأرقام" en="The core code behind every number"></span><code>Python · pandas</code></div><pre id="coreCode"></pre></div>
+</div></section>
+
+<!-- ================= Scrollytelling ================= -->
+<section id="story" class="story-sec"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="قصة البيانات" en="THE DATA STORY"></div><h2 ar="ستة فصول من الرقم إلى القرار." en="Six chapters from number to decision."></h2></div><p ar="مرّر ببطء. الرسم على الجانب يتغيّر مع كل فصل." en="Scroll slowly. The chart beside you changes with each chapter."></p></div>
+  <div class="sgrid">
+    <div class="chs" id="chapters"></div>
+    <div class="stage-w"><div class="stage tilt" data-tilt="3" id="stage"><div class="dots" id="dots"></div><div id="figs"></div></div></div>
+  </div>
+</div></section>
+
+<!-- ================= Dashboard ================= -->
+<section id="dashboard" class="dash-sec"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="الداشبورد" en="THE DASHBOARD"></div><h2 ar="اسأل البيانات بنفسك." en="Ask the data yourself."></h2></div><p ar="كل رسم يتحدّث مع الفلاتر. اضغط على ولاية في الخريطة لتصفية كل شيء." en="Every chart answers the filters. Click a state on the map to filter everything."></p></div>
+  <div class="ds rv" id="ds">
+    <div class="dh">
+      <div><h3 ar="لوحة أداء Olist" en="Olist performance board"></h3><small id="dsScope"></small></div>
+      <div class="fbar" id="fbar">
+        <div class="tabs" id="presets"></div>
+        <label class="sel"><span class="sr" ar="من" en="From"></span><select id="fFrom"></select></label><span class="dash">–</span>
+        <label class="sel"><span class="sr" ar="إلى" en="To"></span><select id="fTo"></select></label>
+        <label class="sel"><span class="sr" ar="الولاية" en="State"></span><select id="fState"></select></label>
+        <button class="rst" id="fReset" type="button" ar="إعادة ضبط" en="Reset"></button>
+      </div>
+    </div>
+    <div class="kp6" id="kpis"></div>
+    <div class="row r1">
+      <div class="panel"><div class="ph2"><h4 id="tTrend"></h4><div class="tabs sm" id="mTabs"></div></div><div id="cTrend" class="chart"></div><small class="un" id="trendNote"></small><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="نجمع الطلبات المُسلَّمة حسب شهر الشراء. الإيراد = مجموع سعر المنتجات (بدون الشحن). الخط المنقط يقارن بالفترة السابقة المساوية في الطول." en="We group delivered orders by purchase month. Revenue = sum of item prices (freight excluded). Deltas compare with the previous period of equal length."></p></details></div>
+      <div class="panel"><div class="ph2"><h4 ar="الإيرادات حسب الفئة" en="Revenue by category"></h4></div><div id="cCats"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="نربط كل بند طلب بفئة المنتج (مترجمة من البرتغالية) ونجمع السعر. تظهر أعلى 8 فئات ويُجمع الباقي." en="Each order item is joined to its product category (translated from Portuguese) and prices are summed. The top 8 are shown, the rest are grouped."></p></details><small class="un" ar="أعلى 8 فئات من أصل 72 · بالألف ريال" en="Top 8 of 72 categories · thousand BRL"></small></div>
+    </div>
+    <div class="row r2">
+      <div class="panel"><div class="ph2"><h4 ar="خريطة الولايات" en="State map"></h4><div class="tabs sm" id="tTabs"></div></div><div id="cTiles"></div><div class="scale" id="tScale"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="كل مربع ولاية، ولونه يعبّر عن القيمة المختارة. الولاية هي ولاية العميل وليس البائع. المتوسطات موزونة بعدد الطلبات." en="Each tile is a state; colour shows the chosen measure. State means the customer state, not the seller. Averages are weighted by order count."></p></details></div>
+      <div class="panel" id="stPanel"></div>
+    </div>
+    <div class="row r3">
+      <div class="panel"><div class="ph2"><h4 ar="التأخير في التوصيل مقابل التقييم" en="Delivery delay vs review score"></h4></div><div id="cDel" class="chart"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="نقسّم الطلبات حسب الفرق بين تاريخ التسليم والتاريخ المقدّر، ثم نحسب متوسط التقييم لكل شريحة. هذا ارتباط وليس إثبات سبب." en="Orders are bucketed by the gap between delivery and the estimated date, then average review is computed per bucket. This is correlation, not proof of cause."></p></details><small class="un" ar="متوسط التقييم (من 5) حسب التأخير عن الموعد المُقدَّر" en="Average review (of 5) by delay vs the estimated date"></small></div>
+      <div class="panel"><div class="ph2"><h4 ar="طرق الدفع" en="Payment methods"></h4></div><div id="cPay"></div><div class="inst" id="cInst"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="نجمع قيمة المدفوعات حسب النوع. الطلب الواحد قد يُدفع بأكثر من طريقة، لذلك عدد المدفوعات أكبر من عدد الطلبات." en="Payment value is summed by type. One order can use several methods, so payments outnumber orders."></p></details></div>
+    </div>
+    <div class="row r4"><div class="panel"><div class="ph2"><h4 ar="متى يشتري العملاء؟" en="When do customers buy?"></h4><small class="un" id="heatNote"></small></div><div id="cHeat"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="نعدّ الطلبات حسب يوم الأسبوع وساعة الشراء (بالتوقيت المسجّل في البيانات). اللون الأغمق = طلبات أكثر." en="Orders are counted by weekday and purchase hour (as recorded in the data). Darker = more orders."></p></details></div></div>
+    <details class="tv"><summary ar="عرض البيانات كجدول" en="View data as a table"></summary><div class="tw" id="tableView"></div></details>
+    <div class="src" ar="المصدر: Olist Brazilian E-Commerce (Kaggle) · الطلبات المُسلَّمة فقط · الإيراد = مجموع أسعار المنتجات بدون الشحن · يناير 2017 – أغسطس 2018" en="Source: Olist Brazilian E-Commerce (Kaggle) · delivered orders only · revenue = sum of item prices excluding freight · Jan 2017 – Aug 2018"></div>
+    <div class="pbi" id="pbi" hidden></div>
+  </div>
+</div></section>
+
+
+<!-- ================= Number book ================= -->
+<section id="numbers"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="دفتر الأرقام" en="THE NUMBER BOOK"></div><h2 ar="من أين جاء كل رقم؟" en="Where did each number come from?"></h2></div><p ar="لكل رقم في الداشبورد تعريف، وصيغة، وجداول مصدر، وسطر كود لإعادة حسابه." en="Every dashboard number has a definition, a formula, its source tables and a line of code to recompute it."></p></div>
+  <div class="nb" id="numberBook"></div>
+  <div class="recon rv" id="recon"></div>
+</div></section>
+
+<!-- ================= Insights ================= -->
+<section id="insights"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="من الاستنتاج إلى القرار" en="FROM INSIGHT TO ACTION"></div><h2 ar="خمس نتائج، وخمس توصيات." en="Five findings, five recommendations."></h2></div><p ar="التوصيات اقتراحات تحليلية. تحتاج اختبارًا قبل التنفيذ." en="Recommendations are analytical suggestions. Test before rolling out."></p></div>
+  <div class="ins" id="insights-grid"></div>
+</div></section>
+
+<!-- ================= Method & limits ================= -->
+<section class="tight"><div class="w">
+  <div class="mt rv">
+    <div><div class="eb" ar="ملخص المنهجية" en="METHOD SUMMARY"></div><h2 ar="كيف حُسبت الأرقام؟" en="How the numbers were built."></h2>
+      <ol class="steps" id="methodSteps"></ol></div>
+    <div class="lim"><h3 ar="حدود التحليل" en="Limits of this analysis"></h3><ul id="limits"></ul></div>
+  </div>
+</div></section>
+
+<section class="ctw"><div class="w rv"><div class="ct">
+  <div><div class="eb" ar="المشروع التالي" en="NEXT PROJECT"></div><h2 ar="عندك بيانات؟ خلّنا نكتشف قصتها." en="You have data. Let us find its story."></h2><p ar="هذا المشروع أول عمل في المعرض. أعمال أخرى قادمة قريبًا." en="This is the first work in the portfolio. More are coming soon."></p></div>
+  <div class="ca"><a class="btn lg" href="index.html#contact" ar="ابدأ محادثة ←" en="Start a conversation →"></a><small ar="أو ارجع لكل الأعمال" en="or go back to all work"></small><div class="soc"><a href="index.html#work" ar="كل الأعمال" en="All work"></a></div></div>
+</div></div></section>
+</main>
+<footer id="siteFooter"></footer>
+
+<script src="js/core.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/olist.js"></script>
+<script src="js/olist-docs.js"></script>
+</body>
+</html>

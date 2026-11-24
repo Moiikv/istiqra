@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title-ar="كتالوج أمازون · استقراء" data-title-en="Amazon catalog · Istiqra">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>كتالوج أمازون · استقراء</title>
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/olist.css">
+</head>
+<body>
+<div id="siteHeader"></div>
+
+<main>
+<!-- ================= Project intro ================= -->
+<div class="w ph">
+  <a class="back" href="index.html#work"><span ar="→ كل الأعمال" en="← All work"></span></a>
+  <div class="ph-grid">
+    <div>
+      <div class="live"><i></i><span ar="مشروع تحليل بيانات · داشبورد تفاعلي" en="Data analysis project · interactive dashboard"></span></div>
+      <h1 class="h1s" data-split data-now ar="هل الخصم الكبير يعني منتجًا أفضل؟" en="Does a big discount mean a better product?"></h1>
+      <p class="lead rv" data-d="300" ar="تحليل كتالوج أمازون الهند: 1,351 منتجًا بعد إزالة التكرار، أسعارها وخصوماتها وتقييماتها. الملف اسمه «مبيعات» لكنه كتالوج: بلا طلبات ولا تواريخ، لذلك نقيس الشعبية بعدد التقييمات وليس بالمبيعات." en="Analysis of the Amazon India catalog: 1,351 products after removing duplicates, with prices, discounts and ratings. The file is named “sales” but it is a catalog: no orders, no dates, so popularity is measured by rating count, not sales."></p>
+      <div class="chips rv" data-d="450"><span>Python · pandas</span><span>Pricing analysis</span><span>Ratings</span><span>Data caveats</span><span>SVG dashboard</span></div>
+      <div class="cta rv" data-d="550"><a class="btn lg" href="#dashboard" ar="افتح الداشبورد ↓" en="Open the dashboard ↓"></a><a class="btn lg o" href="#story" ar="اقرأ القصة" en="Read the story"></a></div>
+    </div>
+    <div class="ph-k rv" data-d="300" id="heroKpis"></div>
+  </div>
+</div>
+
+<!-- ================= Nature of the data ================= -->
+<section id="nature"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="طبيعة البيانات" en="NATURE OF THE DATA"></div><h2 ar="ماذا تحتوي هذه البيانات فعلًا؟" en="What is actually inside this data?"></h2></div><p ar="قبل أي رقم، نعرف من أين جاءت البيانات وما حدودها." en="Before any number, we know where the data came from and what it cannot tell us."></p></div>
+  <div class="nat">
+    <ul class="facts rv" id="facts"></ul>
+    <div class="fun rv" id="funnel"></div>
+  </div>
+  <div class="dq rv"><h3 ar="فحوصات جودة البيانات" en="Data quality checks"></h3><div class="tw2"><table id="dqTable"></table></div></div>
+</div></section>
+
+<!-- ================= Workflow ================= -->
+<section id="workflow" class="tight"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="ماذا فعلنا بالبيانات" en="WHAT WE DID"></div><h2 ar="من ملفات خام إلى لوحة تفاعلية." en="From raw files to an interactive board."></h2></div><p ar="ست خطوات، وكل خطوة تترك أثرًا قابلًا للتحقق." en="Six steps, each leaving something you can verify."></p></div>
+  <ol class="flow" id="flow"></ol>
+  <div class="code rv"><div class="cb"><span ar="الكود الأساسي الذي يبني كل الأرقام" en="The core code behind every number"></span><code>Python · pandas</code></div><pre id="coreCode"></pre></div>
+</div></section>
+
+<!-- ================= Scrollytelling ================= -->
+<section id="story" class="story-sec"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="قصة البيانات" en="THE DATA STORY"></div><h2 ar="ستة فصول من الرقم إلى القرار." en="Six chapters from number to decision."></h2></div><p ar="مرّر ببطء. الرسم على الجانب يتغيّر مع كل فصل." en="Scroll slowly. The chart beside you changes with each chapter."></p></div>
+  <div class="sgrid">
+    <div class="chs" id="chapters"></div>
+    <div class="stage-w"><div class="stage tilt" data-tilt="3" id="stage"><div class="dots" id="dots"></div><div id="figs"></div></div></div>
+  </div>
+</div></section>
+
+<!-- ================= Dashboard ================= -->
+<section id="dashboard" class="dash-sec"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="الداشبورد" en="THE DASHBOARD"></div><h2 ar="اسأل الكتالوج بنفسك." en="Ask the catalog yourself."></h2></div><p ar="اختر فئة أو شريحة سعر أو مستوى خصم، وشاهد كيف تتغيّر التقييمات والشعبية." en="Pick a category, price tier or discount level and watch ratings and popularity change."></p></div>
+  <div class="ds rv" id="ds">
+    <div class="dh"><div><h3 ar="لوحة كتالوج أمازون الهند" en="Amazon India catalog board"></h3><small id="dsScope"></small></div>
+      <div class="fbar" id="fbar"><label class="sel" id="fCat"></label><label class="sel" id="fPrice"></label><label class="sel" id="fDisc"></label><label class="sel" id="fRate"></label><button class="rst" id="fReset" type="button" ar="إعادة ضبط" en="Reset"></button></div></div>
+    <div class="kp6" id="kpis"></div>
+    <div class="row r1">
+      <div class="panel"><div class="ph2"><h4 ar="هل الخصم الأكبر يعني تقييمًا أعلى؟" en="Does a bigger discount mean a higher rating?"></h4></div><div id="cDR" class="chart"></div><small class="un" id="drNote"></small><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="نقسّم المنتجات حسب نسبة الخصم، ثم نحسب متوسط التقييم لكل شريحة. المحور يبدأ من 3.5 ليظهر الفرق الصغير، وهذا واضح في التسمية. الارتباط ضعيف ولا يثبت سببًا." en="Products are grouped by discount level and we average the rating of each group. The axis starts at 3.5 so the small gap is visible, and it is labelled. The relationship is weak and proves no cause."></p></details></div>
+      <div class="panel"><div class="ph2"><h4 ar="الفئات" en="Categories"></h4><div class="tabs sm" id="cTabs"></div></div><div id="cCats"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="الفئة الفرعية الثانية من مسار التصنيف في أمازون. نعرض أكبر الفئات فقط، والباقي في «أخرى»." en="The second level of Amazon&#x27;s category path. Only the biggest categories are listed; the rest are grouped as “Other”."></p></details></div>
+    </div>
+    <div class="row r2">
+      <div class="panel"><div class="ph2"><h4 ar="الشعبية حسب السعر" en="Popularity by price tier"></h4></div><div id="cPP" class="chart"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="الشعبية = عدد التقييمات (rating_count) وليس المبيعات. نعرض الوسيط لأن عدد قليل من المنتجات يملك مئات الآلاف من التقييمات ويشوّه المتوسط." en="Popularity = rating count, not sales. We show the median because a few products with hundreds of thousands of ratings would distort the mean."></p></details></div>
+      <div class="panel"><div class="ph2"><h4 ar="الشعبية حسب الخصم" en="Popularity by discount level"></h4></div><div id="cPD" class="chart"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="وسيط عدد التقييمات لكل شريحة خصم. المنتجات بلا تقييمات مُحتسبة مُستبعدة من هذا الرسم." en="Median rating count per discount level. Products with no rating count are left out of this chart."></p></details></div>
+    </div>
+    <div class="row r3">
+      <div class="panel"><div class="ph2"><h4 ar="توزيع التقييمات" en="Rating distribution"></h4></div><div id="cRD" class="chart"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="عدد المنتجات في كل مستوى تقييم بخطوة 0.2. تتركّز التقييمات بين 3.8 و4.5 تقريبًا." en="Number of products per rating level in 0.2 steps. Ratings cluster between roughly 3.8 and 4.5."></p></details></div>
+      <div class="panel"><div class="ph2"><h4 ar="توزيع الأسعار" en="Price distribution"></h4></div><div id="cPR" class="chart"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="عدد المنتجات في كل شريحة سعرية بعد الخصم، بالروبية الهندية." en="Number of products per price tier after discount, in Indian rupees."></p></details></div>
+    </div>
+    <div class="row r4"><div class="panel"><div class="ph2"><h4 ar="أكثر المنتجات تقييمًا (عددًا)" en="Most-rated products"></h4></div><div class="tw tall" id="cTop"></div><details class="how"><summary ar="كيف يُحسب هذا الرسم؟" en="How is this chart built?"></summary><p ar="نرتّب المنتجات المختارة حسب عدد التقييمات. هذا مؤشر شعبية وليس مبيعات، والنسخ المختلفة من المنتج نفسه تتكرر بالعدد نفسه." en="Selected products ranked by rating count. A popularity signal, not sales; variants of one product repeat the same count."></p></details></div></div>
+    <details class="tv"><summary ar="عرض البيانات كجدول" en="View data as a table"></summary><div class="tw" id="tableView"></div></details>
+    <div class="src" ar="المصدر: Amazon Sales Dataset (Kaggle) · كتالوج منتجات أمازون الهند · لقطة بلا تواريخ · الأسعار بالروبية الهندية" en="Source: Amazon Sales Dataset (Kaggle) · Amazon India product catalog · a snapshot with no dates · prices in Indian rupees"></div>
+  </div>
+</div></section>
+
+<!-- ================= Number book ================= -->
+<section id="numbers"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="دفتر الأرقام" en="THE NUMBER BOOK"></div><h2 ar="من أين جاء كل رقم؟" en="Where did each number come from?"></h2></div><p ar="لكل رقم في الداشبورد تعريف، وصيغة، وجداول مصدر، وسطر كود لإعادة حسابه." en="Every dashboard number has a definition, a formula, its source tables and a line of code to recompute it."></p></div>
+  <div class="nb" id="numberBook"></div>
+  <div class="recon rv" id="recon"></div>
+</div></section>
+
+<!-- ================= Insights ================= -->
+<section id="insights"><div class="w">
+  <div class="hd rv"><div><div class="eb" ar="من الاستنتاج إلى القرار" en="FROM INSIGHT TO ACTION"></div><h2 ar="خمس نتائج، وخمس توصيات." en="Five findings, five recommendations."></h2></div><p ar="التوصيات اقتراحات تحليلية. تحتاج اختبارًا قبل التنفيذ." en="Recommendations are analytical suggestions. Test before rolling out."></p></div>
+  <div class="ins" id="insights-grid"></div>
+</div></section>
+
+<!-- ================= Method & limits ================= -->
+<section class="tight"><div class="w">
+  <div class="mt rv">
+    <div><div class="eb" ar="ملخص المنهجية" en="METHOD SUMMARY"></div><h2 ar="كيف حُسبت الأرقام؟" en="How the numbers were built."></h2>
+      <ol class="steps" id="methodSteps"></ol></div>
+    <div class="lim"><h3 ar="حدود التحليل" en="Limits of this analysis"></h3><ul id="limits"></ul></div>
+  </div>
+</div></section>
+
+<section class="ctw"><div class="w rv"><div class="ct">
+  <div><div class="eb" ar="المشروع التالي" en="NEXT PROJECT"></div><h2 ar="عندك بيانات؟ خلّنا نكتشف قصتها." en="You have data. Let us find its story."></h2><p ar="هذا المشروع أول عمل في المعرض. أعمال أخرى قادمة قريبًا." en="This is the first work in the portfolio. More are coming soon."></p></div>
+  <div class="ca"><a class="btn lg" href="index.html#contact" ar="ابدأ محادثة ←" en="Start a conversation →"></a><small ar="أو ارجع لكل الأعمال" en="or go back to all work"></small><div class="soc"><a href="index.html#work" ar="كل الأعمال" en="All work"></a></div></div>
+</div></div></section>
+</main>
+<footer id="siteFooter"></footer>
+
+<script src="js/core.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/proj.js"></script>
+<script src="js/amazon.js"></script>
+</body>
+</html>
